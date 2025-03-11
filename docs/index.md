@@ -30,10 +30,10 @@ OpenManus 社区版在计算巢部署的费用主要涉及：
    ![image.png](1.jpg)
 
 2. 部署参数需要百炼API-KEY，**[登录百炼控制台](https://bailian.console.aliyun.com/)**，光标悬停在右上角人行图标上，点击**API-KEY**。
-    ![](bailian1.png)
+    ![](bailian_1.jpg)
 
     点击**创建我的API-KEY**，并复制它备用。API-KEY是个人保密信息，切勿泄漏。若未开通百炼，请点击[开通百炼的模型服务](https://help.aliyun.com/zh/model-studio/getting-started/first-api-call-to-qwen?spm=a2c4g.11186623.help-menu-2400256.d_0_1_0.5a06b0a8lg5WY2#5058e161041ps)。
-    ![](bailian2.png)
+    ![](bailian_2.jpg)
 
 3. 参数填写完成后可以看到对应询价明细，确认参数后点击**下一步：确认订单**。
 
