@@ -22,6 +22,9 @@ OpenManus 社区版在计算巢部署的费用主要涉及：
 - 系统盘类型及容量
 - 公网带宽
 
+百炼模型调用费用:
+* 当您首次开通百炼时，平台会自动为您发放各模型的新人专属免费额度，详情请看[百炼新人免费额度](https://help.aliyun.com/zh/model-studio/new-free-quota?spm=a2c4g.11186623.help-menu-2400256.d_4_1.6dea55efFQCijR#view-quota)。
+* 
 ## 部署流程
 
 1. 访问计算巢OpenManus社区版[部署链接](https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?type=user&ServiceName=OpenManus%E7%A4%BE%E5%8C%BA%E7%89%88)，按提示填写部署参数：
