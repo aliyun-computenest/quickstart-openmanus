@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算巢是阿里云开放给企业应用服务商的服务管理平台。服务商能够在计算巢上发布私有化部署服务，为其客户提供云上软件一键部署的能力；同时也支持全托管模式的服务，赋能服务商托管其客户资源。">
+  <title>Home - Aliyun 计算巢 x Demo</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+
+  
+
+  
+  
+
+  
+    <script src="search/main.js"></script>
+  
+
+  
+
+  <script src="js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-inner">
+        <div class="logo">
+          <img src="./img/logo-2x.png">
+        </div>
+        <div class="nav-list">
+          <ul>
+          
+              <li><a href="#_1">概述</a></li>
+              
+          
+              <li><a href="#_2">前提条件</a></li>
+              
+          
+              <li><a href="#_3">计费说明</a></li>
+              
+          
+              <li><a href="#_4">部署流程</a></li>
+              
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content theme-github">
+      
+      <div class="content-inner">        
+        
+        <h2 id="_1">概述</h2>
+<p>Manus 是一款通用型 AI 助手，能将想法转化为行动：不止于思考，更注重成果。Manus 擅长处理工作与生活中的各类任务，在你安心休息的同时，一切都能妥善完成。详情请查看<a href="https://manus.im/">Manus官网</a>。</p>
+<h2 id="_2">前提条件</h2>
+<p>部署OpenManus社区版服务实例，需要对部分阿里云资源进行访问和创建操作。因此您的账号需要包含如下资源的权限。
+<strong>说明</strong>：当您的账号是RAM账号时，才需要添加此权限。</p>
+<table>
+<thead>
+<tr>
+<th>权限策略名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AliyunECSFullAccess</td>
+<td>管理云服务器服务（ECS）的权限</td>
+</tr>
+<tr>
+<td>AliyunVPCFullAccess</td>
+<td>管理专有网络（VPC）的权限</td>
+</tr>
+<tr>
+<td>AliyunROSFullAccess</td>
+<td>管理资源编排服务（ROS）的权限</td>
+</tr>
+<tr>
+<td>AliyunComputeNestUserFullAccess</td>
+<td>管理计算巢服务（ComputeNest）的用户侧权限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">计费说明</h2>
+<p>OpenManus 社区版在计算巢部署的费用主要涉及：</p>
+<ul>
+<li>所选vCPU与内存规格</li>
+<li>系统盘类型及容量</li>
+<li>公网带宽</li>
+</ul>
+<h2 id="_4">部署流程</h2>
+<ol>
+<li>
+<p>访问计算巢OpenManus社区版<a href="https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?type=user&amp;ServiceName=OpenManus%E7%A4%BE%E5%8C%BA%E7%89%88">部署链接</a>，按提示填写部署参数：
+   <img alt="image.png" src="1.jpg" /></p>
+</li>
+<li>
+<p>部署参数需要百炼API-KEY，<strong><a href="https://bailian.console.aliyun.com/">登录百炼控制台</a></strong>，光标悬停在右上角人行图标上，点击<strong>API-KEY</strong>。
+    <img alt="" src="bailian_1.jpg" /></p>
+<p>点击<strong>创建我的API-KEY</strong>，并复制它备用。API-KEY是个人保密信息，切勿泄漏。若未开通百炼，请点击<a href="https://help.aliyun.com/zh/model-studio/getting-started/first-api-call-to-qwen?spm=a2c4g.11186623.help-menu-2400256.d_0_1_0.5a06b0a8lg5WY2#5058e161041ps">开通百炼的模型服务</a>。
+<img alt="" src="bailian_2.jpg" /></p>
+</li>
+<li>
+<p>参数填写完成后可以看到对应询价明细，确认参数后点击<strong>下一步：确认订单</strong>。</p>
+</li>
+<li>
+<p>确认订单完成后同意服务协议并点击<strong>立即创建</strong>进入部署阶段。</p>
+</li>
+<li>
+<p>等待部署完成后在服务实例资源页远程连接ECS。
+   <img alt="image.png" src="2.jpg" /></p>
+</li>
+<li>
+<p>连接ECS后，执行以下命令运行openmanus。
+   <code>shell
+   sudo su
+   cd /root/OpenManus
+   conda activate open_manus
+   python main.py</code>
+   <img alt="image.png" src="3.jpg" /></p>
+</li>
+<li>
+<p>输入任务后开始运行，用法请参考<a href="https://manus.im/usecases">用例展示</a>。
+    <img alt="image.png" src="4.jpg" /></p>
+</li>
+</ol>
+        
+      </div>
+
+      <div class="copyrights">© 2009-2022 Aliyun.com 版权所有</div>
+    </div>
+  </div>
+  
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-03-11 03:31:00.647144+00:00
+  -->
+</body>
+</html>
